@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chá de Fraldas do Antônio | Sol e Praia</title>
+    <!-- Carregando Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Configuração de Fonte Inter (Tailwind padrão) */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        
+        /* Cor de fundo: Areia Clara Suave (#fcf7e9) */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #fcf7e9; 
+        }
+
+        /* Estilo da onda de areia no rodapé (Mantido, mas ajustei a cor do background) */
+        .sand-wave {
+            background: linear-gradient(to top, #fcd34d 0%, #fcd34d 50%, transparent 50%, transparent 100%);
+            height: 100px;
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120' preserveAspectRatio='none'%3E%3Cpath d='M321.39,56.44c58-10.79,114.16-30.13,172-41.88,82.12-14.07,165.49-8.49,252.12,3.36.03.04,115.15,15.73,195.14,26.43s147.26,11.39,228.53.07v29.13l-1200,0Z' style='fill:%23ffffff'/%3E%3Cpath d='M321.39,56.44c58-10.79,114.16-30.13,172-41.88,82.12-14.07,165.49-8.49,252.12,3.36.03.04,115.15,15.73,195.14,26.43s147.26,11.39,228.53.07v29.13l-1200,0Z' style='fill:white'/%3E%3C/svg%3E");
+            mask-repeat: no-repeat;
+            mask-size: 100% 100%;
+        }
+
+        /* Animação de pulsar no sol */
+        @keyframes pulse-sun {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        .animate-pulse-sun {
+            animation: pulse-sun 3s ease-in-out infinite;
+        }
+
+    </style>
+</head>
+<!-- Reduzimos o padding externo para p-2 -->
+<body class="min-h-screen flex items-center justify-center p-2 relative">
+
+    <!-- Container principal do convite -->
+    <div class="bg-[#fffcf0] max-w-sm w-full rounded-3xl shadow-2xl overflow-hidden relative z-10 
+                border-4 border-yellow-500 transform transition-all duration-500 hover:scale-[1.01]">
+        
+        <!-- HEADER: Sol e Céu (Tons Azul Bebê: #ADD8E6 e #87CEEB) -->
+        <!-- Reduzimos o padding do cabeçalho de p-8 pt-10 para p-6 pt-8 -->
+        <div class="bg-gradient-to-br from-blue-300 to-sky-300 p-6 pt-8 relative overflow-hidden">
+            
+            <!-- SVG do Sol no estilo cartoon - com animação -->
+            <div class="absolute top-0 right-0 p-4 animate-pulse-sun">
+                <svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 24 24" class="text-yellow-500 drop-shadow-lg">
+                    <!-- Face Circle (Amarelo) -->
+                    <circle cx="12" cy="12" r="6" fill="#fcd34d" stroke="#f59e0b" stroke-width="0.5" />
+                    
+                    <!-- Rays (Laranjado/Dourado) -->
+                    <line x1="12" y1="0.5" x2="12" y2="3.5" stroke="#f59e0b" stroke-width="1.5" stroke-linecap="round" />
+                    <line x1="12" y1="20.5" x2="12" y2="23.5" stroke="#f59e0b" stroke-width="1.5" stroke-linecap="round" />
+                    <line x1="0.5" y1="12" x2="3.5" y2="12" stroke="#f59e0b" stroke-width="1.5" stroke-linecap="round" />
+                    <line x1="20.5" y1="12" x2="23.5" y2="12" stroke="#f59e0b" stroke-width="1.5" stroke-linecap="round" />
+                    <line x1="2.5" y1="2.5" x2="4.5" y2="4.5" stroke="#f59e0b" stroke-width="1.5" stroke-linecap="round" />
+                    <line x1="19.5" y1="19.5" x2="21.5" y2="21.5" stroke="#f59e0b" stroke-width="1.5" stroke-linecap="round" />
+                    <line x1="2.5" y1="21.5" x2="4.5" y2="19.5" stroke="#f59e0b" stroke-width="1.5" stroke-linecap="round" />
+                    <line x1="19.5" y1="4.5" x2="21.5" y2="2.5" stroke="#f59e0b" stroke-width="1.5" stroke-linecap="round" />
+                    <!-- Raios adicionais para densidade -->
+                    <line x1="8" y1="2.5" x2="8" y2="4.5" stroke="#f59e0b" stroke-width="1.5" stroke-linecap="round" />
+                    <line x1="16" y1="2.5" x2="16" y2="4.5" stroke="#f59e0b" stroke-width="1.5" stroke-linecap="round" />
+
+                    <!-- Detalhes do Rosto (Olhos e Boca de sono/felicidade) -->
+                    <path d="M9.5 10 Q 10.5 11 11.5 10" stroke="#5D4037" stroke-width="0.5" stroke-linecap="round" fill="none"/>
+                    <path d="M12.5 10 Q 13.5 11 14.5 10" stroke="#5D4037" stroke-width="0.5" stroke-linecap="round" fill="none"/>
+                    
+                    <!-- Boca -->
+                    <path d="M10 13 Q 12 15 14 13" stroke="#5D4037" stroke-width="0.5" stroke-linecap="round" fill="none"/>
+                    
+                    <!-- Pontos/Freckles -->
+                    <circle cx="10" cy="11.5" r="0.2" fill="#5D4037"/>
+                    <circle cx="14" cy="11.5" r="0.2" fill="#5D4037"/>
+                </svg>
+            </div>
+            
+            <!-- Título Principal -->
+            <h1 class="text-4xl font-extrabold text-white mb-2 tracking-tight drop-shadow-md">
+                Chá de Fraldas
+            </h1>
+            <h2 class="text-6xl font-black text-yellow-600 drop-shadow-lg">
+                Antônio
+            </h2>
+        </div>
+
+        <!-- ONDAS DO MAR (Simulação visual) - Tom mais suave de azul -->
+        <!-- Reduzimos a altura das ondas de h-6 para h-4 -->
+        <div class="h-4 bg-gradient-to-r from-blue-400 to-sky-300 -mt-2 relative">
+            <div class="absolute inset-0 bg-white opacity-20" style="clip-path: polygon(0 0, 100% 0, 100% 50%, 75% 100%, 50% 50%, 25% 100%, 0 50%);"></div>
+        </div>
+
+
+        <!-- CORPO DO CONVITE: Detalhes -->
+        <!-- Reduzimos o padding do corpo de p-6 para p-4 -->
+        <div class="p-4 space-y-4"> <!-- Reduzi o espaço entre blocos de space-y-6 para space-y-4 -->
+
+            <!-- Bloco Data e Hora -->
+            <!-- Reduzimos o padding interno de p-4 para p-3 -->
+            <div class="bg-yellow-100 rounded-xl p-3 shadow-inner border border-yellow-300">
+                <p class="text-sm font-semibold text-gray-500 mb-1 flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 mr-2 text-yellow-700" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                    QUANDO
+                </p>
+                <p class="text-2xl font-bold text-gray-800">
+                    27 de Dezembro, Sexta-feira
+                </p>
+                <p class="text-lg font-semibold text-blue-700 mt-1">
+                    Às 16h00
+                </p>
+            </div>
+
+            <!-- Bloco Local -->
+            <!-- Reduzimos o padding interno de p-4 para p-3 -->
+            <div class="bg-yellow-100 rounded-xl p-3 shadow-inner border border-yellow-300">
+                <p class="text-sm font-semibold text-gray-500 mb-1 flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 mr-2 text-blue-700" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                    ONDE
+                </p>
+                <p class="text-xl font-bold text-gray-800">
+                    Salão de Festas do Condomínio Palácio de Knossos
+                </p>
+                <p class="text-base text-gray-600 mt-1">
+                    Rua Mato Grosso, 373, Pituba
+                </p>
+            </div>
+            
+            <!-- RSVP -->
+            <!-- Reduzimos o padding inferior de pb-4 para pb-2 -->
+            <div class="text-center pb-2">
+                <p class="text-sm font-medium text-gray-500 mb-2">
+                    Por favor, confirme sua presença!
+                </p>
+                <!-- Link de RSVP para WhatsApp com número (35) 98899-9083 e mensagem pré-preenchida -->
+                <a href="https://wa.me/5535988999083?text=Ol%C3%A1%2C%20confirmo%20minha%20presen%C3%A7a%20no%20Ch%C3%A1%20de%20Fraldas%20do%20Ant%C3%B4nio%20no%20dia%2027%20de%20Dezembro." 
+                   target="_blank" 
+                   class="inline-flex items-center justify-center w-full bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-4 rounded-full shadow-lg shadow-orange-300 transition duration-300 transform hover:scale-[1.03]">
+                   <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 mr-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                    Confirmar Presença (WhatsApp)
+                </a>
+            </div>
+            
+        </div>
+        
+    </div>
+
+    <!-- Efeito de areia no fundo (apenas visual, não interage) -->
+    <div class="sand-wave hidden sm:block"></div>
+
+</body>
+</html>
